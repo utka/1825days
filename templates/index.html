@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+
+
+	</head>
+	<body>
+	<section>
+		<div class="container">
+			<div class="row justify-content-center">
+			</div>
+			 <div class="row">
+				<div class="col-md-12">
+					<div class="content w-100">
+						<!-- #1 -->
+				    <div class="calendar-container"> 
+					  <div class="the-date-start"></div>
+				      <div class="calendar calendar-start">
+						
+				        <div class="year-header"> 
+				          <span class="left-button-start fa fa-chevron-left" id="prev-start"> </span> 
+				          <span class="year-start" id="label"></span> 
+				          <span class="right-button-start fa fa-chevron-right" id="next-start"> </span>
+				        </div> 
+				        <table class="months-table w-100"> 
+				          <tbody>
+				            <tr class="months-row-start">
+				              <td class="month-start">Jan</td> 
+				              <td class="month-start">Feb</td> 
+				              <td class="month-start">Mar</td> 
+				              <td class="month-start">Apr</td> 
+				              <td class="month-start">May</td> 
+				              <td class="month-start">Jun</td> 
+				              <td class="month-start">Jul</td>
+				              <td class="month-start">Aug</td> 
+				              <td class="month-start">Sep</td> 
+				              <td class="month-start">Oct</td>          
+				              <td class="month-start">Nov</td>
+				              <td class="month-start">Dec</td>
+				            </tr>
+				          </tbody>
+				        </table> 
+				        
+				        <table class="days-table w-100"> 
+				          <td class="day">Sun</td> 
+				          <td class="day">Mon</td> 
+				          <td class="day">Tue</td> 
+				          <td class="day">Wed</td> 
+				          <td class="day">Thu</td> 
+				          <td class="day">Fri</td> 
+				          <td class="day">Sat</td>
+				        </table>  
+				        <div class="frame"> 
+				          <table class="dates-table w-100"> 
+			              <tbody class="tbody-start">             
+			              </tbody> 
+				          </table>
+						</div>
+						
+				      </div>
+				    </div>
+					<!-- #2 -->
+					
+					<div class="calendar-container" >
+						<div class="the-date-end"></div>
+						<div class="calendar  calendar-end"> 
+						  <div class="year-header"> 
+							<span class="left-button-end fa fa-chevron-left" id="prev-end"> </span> 
+							<span class="year-end" id="label"></span> 
+							<span class="right-button-end fa fa-chevron-right" id="next-end"> </span>
+						  </div> 
+						  <table class="months-table w-100"> 
+							<tbody>
+							  <tr class="months-row-end">
+								<td class="month-end">Jan</td> 
+								<td class="month-end">Feb</td> 
+								<td class="month-end">Mar</td> 
+								<td class="month-end">Apr</td> 
+								<td class="month-end">May</td> 
+								<td class="month-end">Jun</td> 
+								<td class="month-end">Jul</td>
+								<td class="month-end">Aug</td> 
+								<td class="month-end">Sep</td> 
+								<td class="month-end">Oct</td>          
+								<td class="month-end">Nov</td>
+								<td class="month-end">Dec</td>
+							  </tr>
+							</tbody>
+						  </table> 
+						  
+						  <table class="days-table w-100"> 
+							<td class="day">Sun</td> 
+							<td class="day">Mon</td> 
+							<td class="day">Tue</td> 
+							<td class="day">Wed</td> 
+							<td class="day">Thu</td> 
+							<td class="day">Fri</td> 
+							<td class="day">Sat</td>
+						  </table>  
+						  <div class="frame"> 
+							<table class="dates-table w-100"> 
+							<tbody class="tbody-end">             
+							</tbody> 
+							</table>
+							
+						  </div>
+						  
+						</div>
+					 
+				  </div>
+
+					<table class="ok-end-table"><tr><td><button class="button ok-end">Ok</button></td></tr></table> 
+				</div> 
+			</div>
+		</div>
+		<div class="life">
+
+		</div>
+	</section>
+
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }} " type="text/javascript"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+  <script src="{{ url_for('static', filename='js/jquery_cookie.js') }}" type="text/javascript"></script>
+
+
+	</body>
+</html>
+
