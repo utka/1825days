@@ -10,7 +10,12 @@ $(document).ready(function(){
         date = new Date($.cookie('start'));
         end = new Date($.cookie('end'));
     } else {
-        end.setDate(end.getDate()+1);
+        var hostname = $(location).attr('hostname');
+        if (hostname.indexOf("1825days.com") >= 0) {
+            end.setDate(end.getFullYear() + 5);
+        } else if (hostname.indexOf("nextthreemonths.com") >= 0) {
+            end.setDate(end.getMonth() + 3);
+        }
     }
     // Set click handlers for DOM elements
     $(".right-button-start").click({date: date, id: "start"}, next_year);
@@ -99,6 +104,10 @@ function life() {
     }
     $(".life").append(days);
 }
+
+setInterval(function(){
+    life() 
+}, 1000 * 60 * 60);
 
 function expand_click(event) {
     $(".calendar-start").show();
