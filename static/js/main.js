@@ -110,6 +110,7 @@ setInterval(function(){
 }, 1000 * 60 * 60);
 
 function expand_click(event) {
+    $(".life").empty();
     $(".calendar-start").show();
     $(".the-date-start").hide(0);
     $(".calendar-end").show();
