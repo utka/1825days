@@ -12,9 +12,9 @@ $(document).ready(function(){
     } else {
         var hostname = $(location).attr('hostname');
         if (hostname.indexOf("1825days.com") >= 0) {
-            end.setDate(end.getFullYear() + 5);
+            end.setFullYear(end.getFullYear() + 5);
         } else if (hostname.indexOf("nextthreemonths.com") >= 0) {
-            end.setDate(end.getMonth() + 3);
+            end.setMonth(end.getMonth() + 3);
         }
     }
     // Set click handlers for DOM elements
