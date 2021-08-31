@@ -6,6 +6,7 @@
 $(document).ready(function(){
     var date = new Date();
     var end = new Date();
+    var hostname = $(location).attr('hostname');
     if (hostname.indexOf("1825days.com") >= 0) {
         $(document).prop('title', 'Next Five Years');
     } else if (hostname.indexOf("nextthreemonths.com") >= 0) {
@@ -15,7 +16,6 @@ $(document).ready(function(){
         date = new Date($.cookie('start'));
         end = new Date($.cookie('end'));
     } else {
-        var hostname = $(location).attr('hostname');
         if (hostname.indexOf("1825days.com") >= 0) {
             end.setFullYear(end.getFullYear() + 5);
         } else if (hostname.indexOf("nextthreemonths.com") >= 0) {
