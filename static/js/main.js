@@ -6,6 +6,11 @@
 $(document).ready(function(){
     var date = new Date();
     var end = new Date();
+    if (hostname.indexOf("1825days.com") >= 0) {
+        $(document).prop('title', 'Next Five Years');
+    } else if (hostname.indexOf("nextthreemonths.com") >= 0) {
+        $(document).prop('title', 'Next Three Months');
+    }
     if ($.cookie('start')) {
         date = new Date($.cookie('start'));
         end = new Date($.cookie('end'));
@@ -13,12 +18,8 @@ $(document).ready(function(){
         var hostname = $(location).attr('hostname');
         if (hostname.indexOf("1825days.com") >= 0) {
             end.setFullYear(end.getFullYear() + 5);
-            $(document).prop('title', 'Next Five Years');
-
         } else if (hostname.indexOf("nextthreemonths.com") >= 0) {
             end.setMonth(end.getMonth() + 3);
-            $(document).prop('title', 'Next Three Months');
-            
         }
     }
     // Set click handlers for DOM elements
