@@ -81,7 +81,6 @@ function life() {
     var diff_days_now = Math.round(diff_time_now / (1000 * 3600 * 24));
     $(".life").empty();
     var in_a_row =$(".life").width() / 10 ;
-    console.log(in_a_row);
     var days = $("<tabble class='days_in_life'></table>");
     var curr = 0;
     // //○◌●◐
@@ -90,7 +89,7 @@ function life() {
         var row =  $("<tr></tr>");
         for (var j = 0;  j < in_a_row; j++) {
             if (curr > Difference_In_Days) break;
-            curr ++;
+            
             if (curr < diff_days_now) {
                 row.append("<td>●</td>");
             } else if (curr === diff_days_now) {
@@ -98,6 +97,7 @@ function life() {
             } else {
                 row.append("<td>○</td>");
             }
+            curr ++;
         }
         days.append(row);
         
