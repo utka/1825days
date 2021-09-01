@@ -83,7 +83,7 @@ function life() {
     var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
     var date_now = new Date();
     var diff_time_now = date_now.getTime() - date_start.getTime();
-    var diff_days_now = Math.round(diff_time_now / (1000 * 3600 * 24))-1;
+    var diff_days_now = Math.round(diff_time_now / (1000 * 3600 * 24));
     $(".life").empty();
     var in_a_row =$(".life").width() / 10 ;
     var days = $("<tabble class='days_in_life'></table>");
