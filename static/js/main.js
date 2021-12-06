@@ -39,6 +39,7 @@ $(document).ready(function(){
 
     init_the_date(date, "start");   
     init_calendar(date, "start");
+    
     init_the_date(end, "end");
     init_calendar(end, "end");
 
@@ -88,6 +89,9 @@ function life() {
     var in_a_row =$(".life").width() / 10 ;
     var days = $("<tabble class='days_in_life'></table>");
     var curr = 0;
+    var past = 0;
+    var future = 0;
+
     // //○◌●◐
     for (var i = 0;  i < Difference_In_Days; i+=in_a_row) {
         if (curr > Difference_In_Days) break;
@@ -97,10 +101,12 @@ function life() {
             
             if (curr < diff_days_now) {
                 row.append("<td>●</td>");
+                past ++;
             } else if (curr === diff_days_now) {
                 row.append("<td>◐</td>");
             } else {
                 row.append("<td>○</td>");
+                future ++;
             }
             curr ++;
         }
@@ -108,6 +114,7 @@ function life() {
         
     }
     $(".life").append(days);
+    init_stats(date_now, past, future);
 }
 
 setInterval(function(){
@@ -134,6 +141,14 @@ function init_the_date(date, id) {
 
     $(".the-date-"+id).append(frm + date.toLocaleDateString(undefined,{  year: 'numeric', month: 'short', day: 'numeric' }));
 }
+
+function init_stats(date, past, future) {
+    $(".current-stats").empty();
+    var frm =  "<div class='stats' style='text-align:right;'>" + " ● " + past + "</div><div class='stats'>"
+        + date.toLocaleDateString(undefined,{  year: 'numeric', month: 'short', day: 'numeric' }) + "</div><div class='stats' style='text-align:left;'>○ " + future + "</div>";
+    $(".current-stats").append(frm );
+}
+
 
 // Initialize the calendar by appending the HTML dates
 function init_calendar(date, id) {
